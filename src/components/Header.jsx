@@ -1,5 +1,8 @@
 import React from 'react'
 
+import DashedField from "./DashedField"
+import OutlineButton from "./OutlineButton"
+
 export default function Header() {
     return (
         <header className="flex h-16 items-center justify-between border-b-2 border-black bg-white px-6 py-3 font-mono">
@@ -17,23 +20,11 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="w-95 border border-dashed border-black px-3.5 py-2">
-                <span className="text-[13px] text-slate-500">Search cards...</span>
-            </div>
+            <DashedField className="w-95 text-slate-500">Search cards...</DashedField>
 
             <div className="flex items-center gap-2.5">
-                <button
-                    type="button"
-                    className="border-2 border-black px-4 py-1.5 text-[13px] font-bold text-amber-600"
-                >
-                    Theme
-                </button>
-                <button
-                    type="button"
-                    className="border-2 border-black px-4 py-1.5 text-[13px] font-bold text-orange-600"
-                >
-                    Dev
-                </button>
+                <OutlineButton className="text-amber-600">Theme</OutlineButton>
+                <OutlineButton className="text-orange-600">Dev</OutlineButton>
             </div>
         </header>
     )
